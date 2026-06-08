@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contactez-nous</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK5XKWKTF5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DK5XKWKTF5');
+  </script>
+</head>
+<body>
+
+    <header>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span><span></span>
+    </button>
+    <nav id="nav-menu">
+      <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+ <main>
+    <section class="intro" style="background: #e7f7e7; border-left: 2px solid #25D366; margin-bottom: 24px;">
+  <div style="display:flex; align-items:center; gap:16px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="#25D366">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.244 1.606 6.109L.055 23.454a.75.75 0 0 0 .919.919l5.345-1.551A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 0 1-4.964-1.359l-.356-.211-3.695 1.072 1.072-3.695-.211-.356A9.725 9.725 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+    </svg>
+    <div>
+      <p style="font-weight:600; color:#1a1a1a; margin-bottom:4px;">Rejoins la chaîne WhatsApp d'Aquim'@rt</p>
+      <p style="font-size:13px; color:#5a5a5a; margin-bottom:10px;">Reçois les nouveautés, partage tes avis et reste connecté à la communauté.</p>
+      <a href="https://whatsapp.com/channel/0029VbCUehQL2AU3s438HL3x" target="_blank" style="background:#25D366; color:white; padding:10px 20px; border-radius:20px; text-decoration:none; font-size:13px; font-weight:500;">Rejoindre la chaîne</a>
+    </div>
+  </div>
+    </section>
+
+    <section class="intro">
+  <div class="contact">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="c8e2eceb-4c63-4e08-b648-b6ca677c04c4">
+      <input type="hidden" name="subject" value="Nouveau message - Aquim'@rt">
+      <input type="hidden" name="redirect" value="https://aquimar-blog.netlify.app/contact.html">
+
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="name" placeholder="Votre nom" required>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:6px; margin-top:16px;">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:6px; margin-top:16px;">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+      </div>
+
+      <button type="submit" style="margin-top:20px;">Envoyer</button>
+    </form>
+  </div>
+    </section>
+  </main>
+     <footer>
+    <div class="all-foot">
+      <div class="bloc-footer">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="articles.html">Nos articles</a></li>
+          <li><a href="contact.html">Contactez-nous</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+        </ul>
+      </div>
+      <div class="bloc-footer">
+        <h3>Nous suivre</h3>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aquim_art?igsh=MTRncGtiMmRoZXRlag==" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@aquim_art?_r=1&_t=ZS-947XQexWfeC" target="_blank">TikTok</a>
+          <a href="https://whatsapp.com/channel/0029VbCUehQL2AU3s438HL3x" target="_blank">WhatsApp</a>
+          <a href="https://www.wattpad.com/story/409766171" target="_blank">Wattpad</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-slogan">
+      <p>Des faits, des idées, des gens ! — Copyright 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+   <!-- Avatar flottant -->
+  <div class="avatar-flottant">
+    <div class="avatar-bulle" id="avatar-bulle">
+      « La curiosité est le début de tout. »
+    </div>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" id="avatar-btn">
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Avatar flottant
+    const avatarBtn = document.getElementById('avatar-btn');
+    const bulle = document.getElementById('avatar-bulle');
+    avatarBtn.addEventListener('click', () => {
+      bulle.classList.toggle('visible');
+    });
+    document.addEventListener('click', (e) => {
+      if (!avatarBtn.contains(e.target) && !bulle.contains(e.target)) {
+        bulle.classList.remove('visible');
+      }
+    });
+  </script>
+</body>
+</html>

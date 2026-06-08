@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Blog pour jeunes penseurs. Analyses psychologique, sociologique, historique. Pour mieux cerner les systèmes et mieux se comprendre.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="réflexions psycho-sociologiques, infos scientifiques, personnalités noires, blog jeunes Haïti, pensées critiques">
+  <link rel="stylesheet" href="style.css">
+  <title>Aquim'@rt - Blog intellectuel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK5XKWKTF5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DK5XKWKTF5');
+  </script>
+</head>
+<body>
+
+  <header>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span><span></span>
+    </button>
+    <nav id="nav-menu">
+      <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="titre-bloc">À la une</h2>
+    <div class="un">
+      <div class="un-un">
+        <h2>Psychologie</h2>
+        <a href="article-projection.html">Les autres, ce miroir troublant : <br>Comprendre la projection psychologique</a>
+        <p>Quatre formes de projection qui influencent notre quotidien.</p>
+      </div>
+      
+      <div class="un-un">
+        <h2>Sciences</h2>
+        <a href="article-cerveaux.html">Quand les cerveaux noirs innovent : dix avancées à (re)découvrir</a>
+        <p>Des personnalités noires ayant contribué à des avancées scientifiques.</p>
+      </div>
+    </div>
+
+    <h2 class="titre-bloc">Catégories</h2>
+    <div class="deux">
+      <a href="articles.html#sciences" class="tag">Sciences</a>
+      <a href="articles.html#psychologie" class="tag">Psychologie</a>
+      <a href="articles.html#relation" class="tag">Société</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="all-foot">
+      <div class="bloc-footer">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="articles.html">Nos articles</a></li>
+          <li><a href="contact.html">Contactez-nous</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+        </ul>
+      </div>
+      <div class="bloc-footer">
+        <h3>Nous suivre</h3>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aquim_art?igsh=MTRncGtiMmRoZXRlag==" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@aquim_art?_r=1&_t=ZS-947XQexWfeC" target="_blank">TikTok</a>
+          <a href="https://whatsapp.com/channel/0029VbCUehQL2AU3s438HL3x" target="_blank">WhatsApp</a>
+          <a href="https://www.wattpad.com/story/409766171" target="_blank">Wattpad</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-slogan">
+      <p>Des faits, des idées, des gens ! — Copyright 2026 — Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- Avatar flottant -->
+  <div class="avatar-flottant">
+    <div class="avatar-bulle" id="avatar-bulle">
+      « La curiosité est le début de tout. »
+    </div>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" id="avatar-btn">
+  </div>
+
+  
+  <script>
+    // Avatar flottant
+    const avatarBtn = document.getElementById('avatar-btn');
+    const bulle = document.getElementById('avatar-bulle');
+    avatarBtn.addEventListener('click', () => {
+      bulle.classList.toggle('visible');
+    });
+    document.addEventListener('click', (e) => {
+      if (!avatarBtn.contains(e.target) && !bulle.contains(e.target)) {
+        bulle.classList.remove('visible');
+      }
+    });
+  </script>
+   <script src="script.js"></script>
+
+</body>
+</html>
