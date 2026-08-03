@@ -21,66 +21,70 @@
 </head>
 <body>
 
- 
-     <header>
-  <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
- 
-  <nav class="desktop-nav">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
- 
-  <div class="header-search">
-    <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
-    <div id="search-results" class="search-results"></div>
-  </div>
- 
-  <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
-    <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-  </a>
- 
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span><span></span>
-  </button>
- 
-  <nav id="nav-menu">
-    <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
-    <div class="mobile-search">
-      <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
-      <div id="search-results-mobile" class="search-results"></div>
+  <header>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
+
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
+      <div id="search-results" class="search-results"></div>
     </div>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
-</header>
- 
+
+    <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+    </a>
+
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav-menu">
+      <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
+      <div class="mobile-search">
+        <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
+        <div id="search-results-mobile" class="search-results"></div>
+      </div>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <h2 class="titre-bloc">À la une</h2>
 
     <div class="un">
-      
-       <div class="un-un">
+
+      <div class="un-un">
+        <button class="favori-btn" data-url="article-inflation.html" data-title="L'inflation : comprendre ses origines et ses conséquences" data-categorie="Société" aria-label="Ajouter aux favoris">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+        </button>
         <h2>Société</h2>
         <a href="article-inflation.html">L'inflation : comprendre ses origines et ses conséquences</a>
         <p>Le phénomène de l'inflation expliqué clairement et simplement.</p>
       </div>
-    </div>
-    
+
       <div class="un-un">
+        <button class="favori-btn" data-url="article-projection.html" data-title="Les autres, ce miroir troublant : Comprendre la projection psychologique" data-categorie="Psychologie" aria-label="Ajouter aux favoris">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+        </button>
         <h2>Psychologie</h2>
         <a href="article-projection.html">Les autres, ce miroir troublant : <br>Comprendre la projection psychologique</a>
         <p>Quatre formes de projection qui influencent notre quotidien.</p>
       </div>
-  </div>
+
+    </div>
 
     <h2 class="titre-bloc">Catégories</h2>
     <div class="deux">
@@ -121,10 +125,9 @@
     <div class="avatar-bulle" id="avatar-bulle">
       « La curiosité est le début de tout. »
     </div>
-    <img src="avatar.jpg" alt="Avatar Aquim'@rt" id="avatar-btn">
+    <img src="avatarc.jpg" alt="Avatar Aquim'@rt" id="avatar-btn">
   </div>
 
-  
   <script>
     // Avatar flottant
     const avatarBtn = document.getElementById('avatar-btn');
