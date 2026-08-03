@@ -1,17 +1,20 @@
 [
   {
-    "title": "Quand les cerveaux noirs innovent : six avancées à (re)découvrir",
-    "categorie": "Sciences",
-    "url": "article-cerveaux.html"
-  },
-  {
     "title": "Les autres, ce miroir troublant : Comprendre la projection psychologique",
     "categorie": "Psychologie",
-    "url": "article-projection.html"
+    "url": "article-projection.html",
+    "excerpt": "Pourquoi ce qui nous irrite ou nous fascine chez les autres en dit parfois plus long sur nous-mêmes."
   },
   {
     "title": "L'inflation : comprendre ses origines et ses conséquences",
     "categorie": "Société",
-    "url": "article-inflation.html"
+    "url": "article-inflation.html",
+    "excerpt": "Comprendre d'où vient la hausse des prix, comment elle nous touche, et si on peut vraiment l'influencer."
+  },
+  {
+    "title": "Quand les cerveaux noirs innovent : six avancées à (re)découvrir",
+    "categorie": "Sciences",
+    "url": "article-cerveaux.html",
+    "excerpt": "Six inventions scientifiques signées par des inventeurs noirs, et ce qu'elles ont changé, hier comme aujourd'hui."
   }
 ]
