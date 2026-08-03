@@ -17,21 +17,42 @@
   </script>
 </head>
 <body>
-   <header>
-    <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
-    <button class="hamburger" id="hamburger">
-      <span></span><span></span><span></span><span></span>
-    </button>
-    <nav id="nav-menu">
-      <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="articles.html">Nos articles</a></li>
-        <li><a href="contact.html">Contactez-nous</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header>
+  <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
+ 
+  <nav class="desktop-nav">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="articles.html">Nos articles</a></li>
+      <li><a href="contact.html">Contactez-nous</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+    </ul>
+  </nav>
+ 
+  <div class="header-search">
+    <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
+    <div id="search-results" class="search-results"></div>
+  </div>
+ 
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span><span></span>
+  </button>
+ 
+  <nav id="nav-menu">
+    <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
+    <div class="mobile-search">
+      <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
+      <div id="search-results-mobile" class="search-results"></div>
+    </div>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="articles.html">Nos articles</a></li>
+      <li><a href="contact.html">Contactez-nous</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+    </ul>
+  </nav>
+</header>
+ 
    <main>
 
     <div class="article-header">
