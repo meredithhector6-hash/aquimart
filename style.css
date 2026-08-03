@@ -328,12 +328,176 @@ nav#nav-menu ul li a:hover {
   }
 }
 
+/* ===== MOTSCOEUR : IDENTITÉ DISTINCTE =====
+   Palette : #1f120a (fond, encre), #2f1c10 (cartes), #c9973f (or, inchangé),
+   #c4715a (terracotta, inchangé), #f0e6d8 (texte clair), #b8a692 (texte discret).
+   Typo : Playfair Display italique pour le corps des textes (registre journal/lettre),
+   Lato small-caps pour les métadonnées (auteur, type de texte).
+   Signature : ligne "battement de cœur" en séparateur, écho direct au thème
+   du recueil (Motscoeur / "Le rythme de l'être").
+*/
+.motscoeur-body {
+  background: #1f120a;
+}
+.motscoeur-body main {
+  max-width: 620px;
+}
+
+.motscoeur-hero {
+  text-align: center;
+  padding: 32px 0 8px;
+}
+.motscoeur-hero .motscoeur-eyebrow {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c9973f;
+  margin-bottom: 14px;
+}
+.motscoeur-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 600;
+  color: #f0e6d8;
+  margin-bottom: 16px;
+}
+.motscoeur-hero p {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: #b8a692;
+  line-height: 1.8;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.motscoeur-divider {
+  display: flex;
+  justify-content: center;
+  margin: 36px 0;
+}
+.motscoeur-divider svg {
+  width: 140px;
+  height: 20px;
+  stroke: #c9973f;
+  fill: none;
+  stroke-width: 1.5;
+  opacity: 0.7;
+}
+
+.motscoeur-entry {
+  background: #2f1c10;
+  border-radius: 10px;
+  padding: 36px 30px;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(201,151,63,0.25);
+}
+.motscoeur-entry-tag {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #1f120a;
+  background: #c9973f;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+.motscoeur-entry h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #f0e6d8;
+  margin-bottom: 22px;
+}
+.motscoeur-entry-body p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #e6dbcb;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+.motscoeur-byline {
+  margin-top: 24px;
+  text-align: right;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  color: #b8a692;
+}
+.motscoeur-byline .auteur {
+  color: #c9973f;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .motscoeur-hero h1 {
+    font-size: 38px;
+  }
+  .motscoeur-entry {
+    padding: 48px 44px;
+  }
+}
+
+/* ===== WHATSAPP FLOTTANT ===== */
+.whatsapp-flottant {
+  position: fixed;
+  bottom: 28px;
+  left: 24px;
+  z-index: 300;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+.whatsapp-flottant:hover {
+  transform: scale(1.08);
+}
+.whatsapp-flottant svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+/* ===== PAGE D'ACCUEIL : SLOGAN ===== */
+.hero-slogan {
+  text-align: center;
+  padding: 8px 0 36px;
+}
+.hero-slogan h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c2c2c;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.hero-slogan .hero-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c9973f;
+}
+
 /* ===== GLOSSAIRE ===== */
 .glossaire {
   margin-top: 44px;
   padding-top: 24px;
   border-top: 1px solid #f0e6d8;
-  background: #e4d3ba;
 }
 .glossaire .sources-titre {
   font-size: 11px;
@@ -730,6 +894,15 @@ nav#nav-menu ul li a:hover {
   }
   .a-la-une h2 {
     font-size: 28px;
+  }
+  .hero-slogan {
+    padding: 16px 0 48px;
+  }
+  .hero-slogan h1 {
+    font-size: 32px;
+  }
+  .hero-slogan .hero-sub {
+    font-size: 13px;
   }
 }
 
