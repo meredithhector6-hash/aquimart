@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
 
-  // Créer l'overlay dynamiquement
   const overlay = document.createElement('div');
   overlay.classList.add('nav-overlay');
   document.body.appendChild(overlay);
@@ -129,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btn.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         let current = getFavoris();
 
         if (isFavori(url, current)) {
@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         setFavoris(current);
 
-        // Sur la page favoris, on retire la carte entière plutôt que de juste basculer l'icône
         if (favorisContainer) {
           renderFavoris();
         } else {
@@ -182,4 +181,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderFavoris();
   initFavoriButtons();
+
+  // ===== ACCORDÉON CATÉGORIES =====
+  function initAccordeon() {
+    const items = document.querySelectorAll('.accordeon-item');
+    if (items.length === 0) return;
+
+    items.forEach(item => {
+      const header = item.querySelector('.accordeon-header');
+      header.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+
+    // Ouvre automatiquement la bonne section si on arrive via #sciences, #psychologie, etc.
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target && target.classList.contains('accordeon-item')) {
+        target.classList.add('open');
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 150);
+      }
+    }
+  }
+
+  initAccordeon();
+
+  // ===== FILTRE COURT / LONG =====
+  function initFiltreLongueur() {
+    const buttons = document.querySelectorAll('.filtre-longueur button');
+    if (buttons.length === 0) return;
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filtre = btn.dataset.filtre; // 'tous' | 'court' | 'long'
+
+        document.querySelectorAll('.accordeon-panel').forEach(panel => {
+          const cards = panel.querySelectorAll('.un-un');
+          let visibleCount = 0;
+
+          cards.forEach(card => {
+            const match = filtre === 'tous' || card.dataset.longueur === filtre;
+            card.style.display = match ? '' : 'none';
+            if (match) visibleCount++;
+          });
+
+          let emptyMsg = panel.querySelector('.accordeon-vide');
+          const unContainer = panel.querySelector('.un');
+
+          if (visibleCount === 0) {
+            if (!emptyMsg && unContainer) {
+              emptyMsg = document.createElement('p');
+              emptyMsg.className = 'accordeon-vide';
+              emptyMsg.textContent = "Aucun article dans cette catégorie pour l'instant.";
+              unContainer.appendChild(emptyMsg);
+            }
+          } else if (emptyMsg) {
+            emptyMsg.remove();
+          }
+        });
+      });
+    });
+  }
+
+  initFiltreLongueur();
 });
