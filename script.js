@@ -30,23 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Fermer en cliquant sur l'overlay
     overlay.addEventListener('click', closeMenu);
 
-    // Fermer en cliquant sur un lien
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', closeMenu);
     });
 
-    // Fermer avec Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeMenu();
     });
   }
 
   // ===== RECHERCHE =====
-  // Chemin relatif : fonctionne tant que articles-index.json est à la racine du site,
-  // au même niveau que les pages HTML.
   let articlesIndex = [];
 
   fetch('articles-index.json')
@@ -89,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
       renderResults(results, matches);
     });
 
-    // Fermer les résultats en cliquant ailleurs
     document.addEventListener('click', (e) => {
       if (!input.contains(e.target) && !results.contains(e.target)) {
         results.classList.remove('visible');
@@ -99,4 +93,93 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupSearch('search-input', 'search-results');
   setupSearch('search-input-mobile', 'search-results-mobile');
+
+  // ===== FAVORIS =====
+  const FAVORIS_KEY = 'aquimart_favoris';
+
+  function getFavoris() {
+    try {
+      return JSON.parse(localStorage.getItem(FAVORIS_KEY)) || [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function setFavoris(list) {
+    localStorage.setItem(FAVORIS_KEY, JSON.stringify(list));
+  }
+
+  function isFavori(url, favoris) {
+    return favoris.some(f => f.url === url);
+  }
+
+  function initFavoriButtons() {
+    const favoris = getFavoris();
+    const favorisContainer = document.getElementById('favoris-container');
+
+    document.querySelectorAll('.favori-btn').forEach(btn => {
+      const url = btn.dataset.url;
+      if (isFavori(url, favoris)) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+      } else {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      }
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let current = getFavoris();
+
+        if (isFavori(url, current)) {
+          current = current.filter(f => f.url !== url);
+        } else {
+          current.push({
+            url: url,
+            title: btn.dataset.title,
+            categorie: btn.dataset.categorie
+          });
+        }
+        setFavoris(current);
+
+        // Sur la page favoris, on retire la carte entière plutôt que de juste basculer l'icône
+        if (favorisContainer) {
+          renderFavoris();
+        } else {
+          btn.classList.toggle('active');
+          btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+        }
+      });
+    });
+  }
+
+  function renderFavoris() {
+    const container = document.getElementById('favoris-container');
+    if (!container) return;
+
+    const favoris = getFavoris();
+
+    if (favoris.length === 0) {
+      container.innerHTML = `
+        <div class="un-un">
+          <p>Tu n'as pas encore de favoris. Explore nos articles et clique sur le cœur pour les garder sous la main.</p>
+        </div>`;
+      return;
+    }
+
+    container.innerHTML = favoris.map(f => `
+      <div class="un-un">
+        <button class="favori-btn active" data-url="${f.url}" data-title="${f.title}" data-categorie="${f.categorie}" aria-label="Retirer des favoris" aria-pressed="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+        </button>
+        <h2>${f.categorie}</h2>
+        <a href="${f.url}">${f.title}</a>
+      </div>
+    `).join('');
+
+    initFavoriButtons();
+  }
+
+  renderFavoris();
+  initFavoriButtons();
 });
