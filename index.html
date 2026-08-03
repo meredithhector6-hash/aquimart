@@ -62,28 +62,30 @@
   </header>
 
   <main>
-    <h2 class="titre-bloc">À la une</h2>
 
-    <div class="un">
+    <!-- À LA UNE (rempli automatiquement par script.js à partir d'articles-index.json) -->
+    <div class="a-la-une" id="a-la-une-container">
+      <p style="font-size:13px; color:#7a7a7a; font-style:italic;">Chargement de l'article à la une...</p>
+    </div>
 
-      <div class="un-un">
-        <button class="favori-btn" data-url="article-inflation.html" data-title="L'inflation : comprendre ses origines et ses conséquences" data-categorie="Société" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-        </button>
-        <h2>Société</h2>
-        <a href="article-inflation.html">L'inflation : comprendre ses origines et ses conséquences</a>
-        <p>Le phénomène de l'inflation expliqué clairement et simplement.</p>
-      </div>
+    <!-- STATS -->
+    <p class="stats-ligne">
+      <strong id="stats-articles">3</strong> articles &middot; <strong>3</strong> catégories &middot; <strong>1</strong> réflexion
+    </p>
 
-      <div class="un-un">
-        <button class="favori-btn" data-url="article-projection.html" data-title="Les autres, ce miroir troublant : Comprendre la projection psychologique" data-categorie="Psychologie" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-        </button>
-        <h2>Psychologie</h2>
-        <a href="article-projection.html">Les autres, ce miroir troublant : <br>Comprendre la projection psychologique</a>
-        <p>Quatre formes de projection qui influencent notre quotidien.</p>
-      </div>
+    <!-- LE SAIS-TU -->
+    <a class="le-sais-tu" href="article-projection.html">
+      <span class="le-sais-tu-label">Le sais-tu ?</span>
+      <p>Ce que tu admires excessivement chez quelqu'un en dit peut-être plus sur toi que sur cette personne.</p>
+    </a>
 
+    <!-- APERÇU MOTSCOEUR -->
+    <div class="motscoeur-preview">
+      <span class="motscoeur-preview-label">Motscoeur</span>
+      <h3>Le rythme de l'être</h3>
+      <p>« Les humains avancent par vagues. Un jour calmes, songeurs, goûtant la mélancolie comme un vin reposé ; le lendemain, débordants de joie, emportés par l'envie de vivre... »</p>
+      <p class="signature">— L.M Vagabonde</p>
+      <a class="motscoeur-cta" href="motscoeur.html">Voir toutes les réflexions →</a>
     </div>
 
     <h2 class="titre-bloc">Catégories</h2>
