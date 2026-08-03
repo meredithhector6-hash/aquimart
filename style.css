@@ -329,23 +329,22 @@ nav#nav-menu ul li a:hover {
 }
 
 /* ===== MOTSCOEUR : IDENTITÉ DISTINCTE =====
-   Palette : #1f120a (fond, encre), #2f1c10 (cartes), #c9973f (or, inchangé),
-   #c4715a (terracotta, inchangé), #f0e6d8 (texte clair), #b8a692 (texte discret).
-   Typo : Playfair Display italique pour le corps des textes (registre journal/lettre),
-   Lato small-caps pour les métadonnées (auteur, type de texte).
-   Signature : ligne "battement de cœur" en séparateur, écho direct au thème
-   du recueil (Motscoeur / "Le rythme de l'être").
+   Palette : #ffffff (fond), #EAE4F5 (carte, lavande clair), #4B3B77 (lavande
+   foncé, accent/barre du haut), #6b5f8a (texte discret), #c9973f (or, réservé
+   à l'état "aimé" du cœur, pour qu'il ressorte comme un vrai accent).
+   Cartes façon post Instagram : taille fixe carrée, défilement interne,
+   barre du haut avec bouton favoris. En grille côte à côte dès le tablette/desktop.
 */
 .motscoeur-body {
-  background: #1f120a;
+  background: #ffffff;
 }
 .motscoeur-body main {
-  max-width: 620px;
+  max-width: 960px;
 }
 
 .motscoeur-hero {
   text-align: center;
-  padding: 32px 0 8px;
+  padding: 24px 0 8px;
 }
 .motscoeur-hero .motscoeur-eyebrow {
   display: block;
@@ -354,7 +353,7 @@ nav#nav-menu ul li a:hover {
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #c9973f;
+  color: #7A65B0;
   margin-bottom: 14px;
 }
 .motscoeur-hero h1 {
@@ -362,87 +361,140 @@ nav#nav-menu ul li a:hover {
   font-style: italic;
   font-size: 30px;
   font-weight: 600;
-  color: #f0e6d8;
+  color: #4B3B77;
   margin-bottom: 16px;
 }
 .motscoeur-hero p {
   font-family: 'Playfair Display', serif;
   font-size: 14px;
-  color: #b8a692;
+  color: #6b5f8a;
   line-height: 1.8;
-  max-width: 440px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
 .motscoeur-divider {
   display: flex;
   justify-content: center;
-  margin: 36px 0;
+  margin: 32px 0;
 }
 .motscoeur-divider svg {
   width: 140px;
   height: 20px;
-  stroke: #c9973f;
+  stroke: #8b7fc0;
   fill: none;
   stroke-width: 1.5;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
+/* Grille : empilée sur mobile, côte à côte à partir de la tablette */
+.motscoeur-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Carte façon "post" : taille fixe, carrée, contenu défilable à l'intérieur */
 .motscoeur-entry {
-  background: #2f1c10;
-  border-radius: 10px;
-  padding: 36px 30px;
-  margin-bottom: 20px;
-  border-top: 1px solid rgba(201,151,63,0.25);
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 320px;
+  background: #EAE4F5;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(75,59,119,0.14);
+}
+
+/* Barre du haut : étiquette + bouton favoris, comme l'en-tête d'un post */
+.motscoeur-entry-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #4B3B77;
+  flex-shrink: 0;
 }
 .motscoeur-entry-tag {
-  display: inline-block;
   font-family: 'Lato', sans-serif;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #1f120a;
-  background: #c9973f;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 18px;
+  color: #EAE4F5;
 }
-.motscoeur-entry h2 {
+.motscoeur-entry-top .favori-btn {
+  position: static;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  box-shadow: none;
+}
+.motscoeur-entry-top .favori-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: #EAE4F5;
+}
+.motscoeur-entry-top .favori-btn.active svg {
+  fill: #c9973f;
+  stroke: #c9973f;
+}
+
+/* Zone de texte défilable */
+.motscoeur-entry-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 18px 20px;
+}
+.motscoeur-entry-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.motscoeur-entry-scroll::-webkit-scrollbar-thumb {
+  background: #c9b8ec;
+  border-radius: 3px;
+}
+.motscoeur-entry-scroll h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
-  color: #f0e6d8;
-  margin-bottom: 22px;
+  color: #4B3B77;
+  margin-bottom: 10px;
 }
-.motscoeur-entry-body p {
+.motscoeur-entry-scroll p {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 15px;
-  color: #e6dbcb;
-  line-height: 2;
-  margin-bottom: 16px;
+  font-size: 13px;
+  color: #463a63;
+  line-height: 1.85;
+  margin-bottom: 10px;
 }
-.motscoeur-byline {
-  margin-top: 24px;
-  text-align: right;
+.motscoeur-entry-scroll .signature-inline {
+  display: block;
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
   font-style: normal;
-  letter-spacing: 0.05em;
-  color: #b8a692;
+  font-size: 11px;
+  color: #7A65B0;
+  margin-top: 14px;
+  text-align: right;
 }
-.motscoeur-byline .auteur {
-  color: #c9973f;
-  font-weight: 700;
+
+@media (min-width: 640px) {
+  .motscoeur-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .motscoeur-entry {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 768px) {
   .motscoeur-hero h1 {
     font-size: 38px;
-  }
-  .motscoeur-entry {
-    padding: 48px 44px;
   }
 }
 
