@@ -40,12 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== RECHERCHE =====
+  // ===== RECHERCHE + À LA UNE + STATS =====
+  // Ces trois blocs partagent le même fichier articles-index.json,
+  // donc on ne le charge qu'une seule fois.
   let articlesIndex = [];
 
   fetch('articles-index.json')
     .then(res => res.json())
-    .then(data => { articlesIndex = data; })
+    .then(data => {
+      articlesIndex = data;
+      renderFeatured();
+      renderStats();
+    })
     .catch(err => console.error('Impossible de charger l\'index des articles :', err));
 
   function renderResults(container, matches) {
@@ -92,6 +98,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupSearch('search-input', 'search-results');
   setupSearch('search-input-mobile', 'search-results-mobile');
+
+  // Article "à la une" = toujours le DERNIER élément d'articles-index.json.
+  // Pour changer l'article mis en avant, il suffit d'ajouter le nouveau
+  // à la fin du tableau dans articles-index.json.
+  function renderFeatured() {
+    const container = document.getElementById('a-la-une-container');
+    if (!container || articlesIndex.length === 0) return;
+
+    const article = articlesIndex[articlesIndex.length - 1];
+    container.innerHTML = `
+      <span class="a-la-une-tag">À la une</span>
+      <span class="article-categorie-inline">${article.categorie}</span>
+      <h2><a href="${article.url}">${article.title}</a></h2>
+      <p>${article.excerpt || ''}</p>
+      <a class="a-la-une-cta" href="${article.url}">Lire l'article →</a>
+    `;
+  }
+
+  // Repère "X articles" sur la page d'accueil (le nombre de catégories et
+  // de réflexions Motscoeur restent à mettre à jour à la main pour l'instant).
+  function renderStats() {
+    const el = document.getElementById('stats-articles');
+    if (!el) return;
+    el.textContent = articlesIndex.length;
+  }
 
   // ===== FAVORIS =====
   const FAVORIS_KEY = 'aquimart_favoris';
@@ -194,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Ouvre automatiquement la bonne section si on arrive via #sciences, #psychologie, etc.
     if (location.hash) {
       const target = document.querySelector(location.hash);
       if (target && target.classList.contains('accordeon-item')) {
@@ -217,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const filtre = btn.dataset.filtre; // 'tous' | 'court' | 'long'
+        const filtre = btn.dataset.filtre;
 
         document.querySelectorAll('.accordeon-panel').forEach(panel => {
           const cards = panel.querySelectorAll('.un-un');
