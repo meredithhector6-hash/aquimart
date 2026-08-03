@@ -328,6 +328,65 @@ nav#nav-menu ul li a:hover {
   }
 }
 
+/* ===== GLOSSAIRE ===== */
+.glossaire {
+  margin-top: 44px;
+  padding-top: 24px;
+  border-top: 1px solid #f0e6d8;
+}
+.glossaire .sources-titre {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c4b8b0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.glossaire-item {
+  border-bottom: 1px solid #f5f0e8;
+  padding: 14px 0;
+}
+.glossaire-item:last-child {
+  border-bottom: none;
+}
+.glossaire-item summary {
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c2c2c;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.glossaire-item summary::-webkit-details-marker {
+  display: none;
+}
+.glossaire-item summary::after {
+  content: '+';
+  color: #c9973f;
+  font-size: 20px;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.glossaire-item[open] summary::after {
+  content: '\2212';
+}
+.glossaire-item p {
+  font-size: 13px;
+  font-weight: 300;
+  color: #5a5a5a;
+  line-height: 1.8;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.glossaire-item p a {
+  color: #c9973f;
+  text-decoration: underline;
+}
+
 /* ===== FILTRE COURT / LONG ===== */
 .filtre-longueur {
   display: flex;
