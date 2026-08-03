@@ -17,58 +17,51 @@
   </script>
 </head>
 <body>
-   <!--
-  INSTRUCTIONS :
-  Remplace tout le bloc <header>...</header> existant par celui-ci, sur CHACUNE de ces pages :
-  index.html, articles.html, article-cerveaux.html, article-projection.html,
-  article-inflation.html, contact.html, apropos.html, favoris.html
+   <header>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
 
-  ATTENTION : sur index.html uniquement, remplace "avatar.jpg" par "avatarc.jpg"
-  pour l'avatar du header (id="avatar-header").
--->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
 
-<header>
-  <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
-
-  <nav class="desktop-nav">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
-
-  <div class="header-search">
-    <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
-    <div id="search-results" class="search-results"></div>
-  </div>
-
-  <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
-    <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-  </a>
-
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span><span></span>
-  </button>
-
-  <nav id="nav-menu">
-    <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
-    <div class="mobile-search">
-      <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
-      <div id="search-results-mobile" class="search-results"></div>
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
+      <div id="search-results" class="search-results"></div>
     </div>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
-</header>
+
+    <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+    </a>
+
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav-menu">
+      <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
+      <div class="mobile-search">
+        <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
+        <div id="search-results-mobile" class="search-results"></div>
+      </div>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
    <main>
 
     <div class="article-header">
+      <button class="favori-btn" data-url="article-cerveaux.html" data-title="Quand les cerveaux noirs innovent : six avancées à (re)découvrir" data-categorie="Sciences" aria-label="Ajouter aux favoris">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+      </button>
       <span class="article-categorie">Sciences</span>
       <h1>Quand les cerveaux noirs innovent : six avancées à (re)découvrir</h1>
     </div>
@@ -114,6 +107,25 @@
       <p>Sa technique est aujourd'hui utilisée dans le monde entier, et les instruments modernes de chirurgie de la cataracte assistée par laser descendent directement de son travail, une continuité d'autant plus frappante que la chirurgie de la cataracte est désormais <a href="https://press.asimov.com/articles/cataracts" target="_blank" style="color:#c9973f;text-decoration:underline;">l'opération chirurgicale la plus pratiquée au monde</a>, toutes spécialités confondues. Bath détient au total cinq brevets américains, dont trois liés au Laserphaco. Elle prend sa retraite de UCLA Medical Center en 1993, meurt en 2019, et est intronisée à titre posthume au National Inventors Hall of Fame en 2022.</p>
 
       <p>Ces six innovations ne représentent qu'une fraction des contributions scientifiques et techniques apportées par des personnes noires à travers l'histoire. Je pencherais même pour dire que le nombre de découvertes et d'inventions faites par les Noirs est inestimable, car aucune société ne survit si elle n'évolue pas, si elle ne s'adapte pas, si elle n'a pas parmi les siens des gens qui cherchent, qui bricolent, qui inventent. Néanmoins, mettre en lumière ces contributions nous aide à nous rappeler que le génie n'a jamais été affaire de couleur ou de sexe, mais surtout de bon sens et peut-être d'un peu de passion. Alors à toi qui vises l'excellence, voici quelques preuves, parmi tant d'autres, que tu en es capable.</p>
+
+      <!-- Signature auteur -->
+      <div class="article-auteur" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #f0e6d8; display: flex; align-items: center; gap: 12px;">
+        <span style="font-family: 'Playfair Display', serif; font-size: 13px; color: #5a5a5a; font-style: italic;">— Aquimar</span>
+      </div>
+
+      <div class="lire-aussi">
+        <p class="sources-titre">À lire aussi</p>
+        <div class="lire-aussi-cards">
+          <a class="lire-aussi-card" href="article-projection.html">
+            <span class="lire-aussi-cat">Psychologie</span>
+            <span class="lire-aussi-title">Les autres, ce miroir troublant : Comprendre la projection psychologique</span>
+          </a>
+          <a class="lire-aussi-card" href="article-inflation.html">
+            <span class="lire-aussi-cat">Société</span>
+            <span class="lire-aussi-title">L'inflation : comprendre ses origines et ses conséquences</span>
+          </a>
+        </div>
+      </div>
 
       <div class="article-sources">
         <p class="sources-titre">Source</p>
