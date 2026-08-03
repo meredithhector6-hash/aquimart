@@ -20,44 +20,44 @@
 </head>
 <body>
      <header>
-  <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
- 
-  <nav class="desktop-nav">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
- 
-  <div class="header-search">
-    <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
-    <div id="search-results" class="search-results"></div>
-  </div>
- 
-  <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
-    <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-  </a>
- 
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span><span></span>
-  </button>
- 
-  <nav id="nav-menu">
-    <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
-    <div class="mobile-search">
-      <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
-      <div id="search-results-mobile" class="search-results"></div>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
+
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
+      <div id="search-results" class="search-results"></div>
     </div>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
-</header>
+
+    <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+    </a>
+
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav-menu">
+      <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
+      <div class="mobile-search">
+        <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
+        <div id="search-results-mobile" class="search-results"></div>
+      </div>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
   
   <main>
   <section class="intro">
@@ -67,7 +67,10 @@
   <h2 class="titre-bloc" id="sciences">Sciences</h2>
     <div class="un">
       <div class="un-un">
-        <a href="article-cerveaux.html">Quand les cerveaux noirs innovent : dix avancées à (re)découvrir</a>
+        <button class="favori-btn" data-url="article-cerveaux.html" data-title="Quand les cerveaux noirs innovent : six avancées à (re)découvrir" data-categorie="Sciences" aria-label="Ajouter aux favoris">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+        </button>
+        <a href="article-cerveaux.html">Quand les cerveaux noirs innovent : six avancées à (re)découvrir</a>
         <p style="margin-top: 8px;">Des personnalités noires ayant contribuées à des avancées scientifiques.</p>
       </div>
     </div>
@@ -75,6 +78,9 @@
       <h2 class="titre-bloc" id="psychologie">Psychologie</h2>
     <div class="un">
      <div class="un-un">
+        <button class="favori-btn" data-url="article-projection.html" data-title="Les autres, ce miroir troublant : Comprendre la projection psychologique" data-categorie="Psychologie" aria-label="Ajouter aux favoris">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+        </button>
         <a href="article-projection.html">Les autres, ce miroir troublant : <br>Comprendre la projection psychologique</a>
         <p style="margin-top: 8px;">Quatre formes de projection qui influencent notre quotidien.</p>
       </div>
@@ -83,6 +89,9 @@
    <h2 class="titre-bloc" id="relation">Société</h2>
     <div class="un">
        <div class="un-un">
+        <button class="favori-btn" data-url="article-inflation.html" data-title="L'inflation : comprendre ses origines et ses conséquences" data-categorie="Société" aria-label="Ajouter aux favoris">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+        </button>
         <a href="article-inflation.html">L'inflation : <br>comprendre ses origines et ses conséquences</a>
         <p style="margin-top: 8px;">Le phénomène de l'inflation expliqué clairement et simplement.</p>
        </div>
