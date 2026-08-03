@@ -60,42 +60,74 @@
   </header>
   
   <main>
-  <section class="intro">
+    <section class="intro">
       <h1 class="align">Nos articles</h1>
       <p>Retrouvez ici l'ensemble de nos publications, classées par thématique.</p>
     </section>
-  <h2 class="titre-bloc" id="sciences">Sciences</h2>
-    <div class="un">
-      <div class="un-un">
-        <button class="favori-btn" data-url="article-cerveaux.html" data-title="Quand les cerveaux noirs innovent : six avancées à (re)découvrir" data-categorie="Sciences" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-        </button>
-        <a href="article-cerveaux.html">Quand les cerveaux noirs innovent : six avancées à (re)découvrir</a>
-        <p style="margin-top: 8px;">Des personnalités noires ayant contribuées à des avancées scientifiques.</p>
+
+    <div class="filtre-longueur">
+      <button data-filtre="tous" class="active">Tous</button>
+      <button data-filtre="court">Courts</button>
+      <button data-filtre="long">Longs</button>
+    </div>
+
+    <!-- SCIENCES -->
+    <div class="accordeon-item open" id="sciences">
+      <button class="accordeon-header">
+        <span>Sciences</span>
+        <svg class="accordeon-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="accordeon-panel">
+        <div class="un">
+          <div class="un-un" data-longueur="long">
+            <button class="favori-btn" data-url="article-cerveaux.html" data-title="Quand les cerveaux noirs innovent : six avancées à (re)découvrir" data-categorie="Sciences" aria-label="Ajouter aux favoris">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+            </button>
+            <a href="article-cerveaux.html">Quand les cerveaux noirs innovent : six avancées à (re)découvrir</a>
+            <p style="margin-top: 8px;">Des personnalités noires ayant contribuées à des avancées scientifiques.</p>
+          </div>
+        </div>
       </div>
     </div>
-  
-      <h2 class="titre-bloc" id="psychologie">Psychologie</h2>
-    <div class="un">
-     <div class="un-un">
-        <button class="favori-btn" data-url="article-projection.html" data-title="Les autres, ce miroir troublant : Comprendre la projection psychologique" data-categorie="Psychologie" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-        </button>
-        <a href="article-projection.html">Les autres, ce miroir troublant : <br>Comprendre la projection psychologique</a>
-        <p style="margin-top: 8px;">Quatre formes de projection qui influencent notre quotidien.</p>
+
+    <!-- PSYCHOLOGIE -->
+    <div class="accordeon-item" id="psychologie">
+      <button class="accordeon-header">
+        <span>Psychologie</span>
+        <svg class="accordeon-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="accordeon-panel">
+        <div class="un">
+          <div class="un-un" data-longueur="long">
+            <button class="favori-btn" data-url="article-projection.html" data-title="Les autres, ce miroir troublant : Comprendre la projection psychologique" data-categorie="Psychologie" aria-label="Ajouter aux favoris">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+            </button>
+            <a href="article-projection.html">Les autres, ce miroir troublant : <br>Comprendre la projection psychologique</a>
+            <p style="margin-top: 8px;">Quatre formes de projection qui influencent notre quotidien.</p>
+          </div>
+        </div>
       </div>
     </div>
-  
-   <h2 class="titre-bloc" id="relation">Société</h2>
-    <div class="un">
-       <div class="un-un">
-        <button class="favori-btn" data-url="article-inflation.html" data-title="L'inflation : comprendre ses origines et ses conséquences" data-categorie="Société" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-        </button>
-        <a href="article-inflation.html">L'inflation : <br>comprendre ses origines et ses conséquences</a>
-        <p style="margin-top: 8px;">Le phénomène de l'inflation expliqué clairement et simplement.</p>
-       </div>
+
+    <!-- SOCIÉTÉ -->
+    <div class="accordeon-item" id="relation">
+      <button class="accordeon-header">
+        <span>Société</span>
+        <svg class="accordeon-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
+      <div class="accordeon-panel">
+        <div class="un">
+          <div class="un-un" data-longueur="long">
+            <button class="favori-btn" data-url="article-inflation.html" data-title="L'inflation : comprendre ses origines et ses conséquences" data-categorie="Société" aria-label="Ajouter aux favoris">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+            </button>
+            <a href="article-inflation.html">L'inflation : <br>comprendre ses origines et ses conséquences</a>
+            <p style="margin-top: 8px;">Le phénomène de l'inflation expliqué clairement et simplement.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
   </main>
     <footer>
     <div class="all-foot">
