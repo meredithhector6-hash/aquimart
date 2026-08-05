@@ -278,4 +278,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initFiltreLongueur();
+
+  // ===== MOTSCOEUR : LECTURE PLEIN ÉCRAN =====
+  function initMotscoeurExpand() {
+    const modal = document.getElementById('motscoeur-modal');
+    if (!modal) return;
+
+    const content = document.getElementById('motscoeur-modal-content');
+    const closeBtn = modal.querySelector('.motscoeur-modal-close');
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.expand-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const entry = document.getElementById(btn.dataset.target);
+        const scrollEl = entry ? entry.querySelector('.motscoeur-entry-scroll') : null;
+        if (!scrollEl) return;
+
+        content.innerHTML = scrollEl.innerHTML;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  }
+
+  initMotscoeurExpand();
 });
