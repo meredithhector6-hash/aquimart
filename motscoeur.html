@@ -28,7 +28,6 @@
         <li><a href="articles.html">Nos articles</a></li>
         <li><a href="contact.html">Contactez-nous</a></li>
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="motscoeur.html">Motscoeur</a></li>
       </ul>
     </nav>
 
@@ -56,7 +55,6 @@
         <li><a href="articles.html">Nos articles</a></li>
         <li><a href="contact.html">Contactez-nous</a></li>
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="motscoeur.html">Motscoeur</a></li>
       </ul>
     </nav>
   </header>
@@ -81,9 +79,14 @@
       <div class="motscoeur-entry" id="rythme-de-l-etre">
         <div class="motscoeur-entry-top">
           <span class="motscoeur-entry-tag">Poème</span>
-          <button class="favori-btn" data-url="motscoeur.html#rythme-de-l-etre" data-title="Le rythme de l'être" data-categorie="Motscoeur" aria-label="Mettre en favoris">
-            <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-          </button>
+          <div class="motscoeur-entry-actions">
+            <button class="expand-btn" data-target="rythme-de-l-etre" aria-label="Lire en plein écran">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6M4 4v6M4 4l6 6M20 4h-6M20 4v6M20 4l-6-6M4 20h6M4 20v-6M4 20l6-6M20 20h-6M20 20v-6M20 20l-6-6"/></svg>
+            </button>
+            <button class="favori-btn" data-url="motscoeur.html#rythme-de-l-etre" data-title="Le rythme de l'être" data-categorie="Motscoeur" aria-label="Mettre en favoris">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+            </button>
+          </div>
         </div>
         <div class="motscoeur-entry-scroll">
           <h2>Le rythme de l'être</h2>
@@ -137,9 +140,21 @@
            colle-le juste avant la fin de .motscoeur-grid, et change :
            - l'id du bloc (doit être unique, sert de lien direct vers ce texte)
            - le tag (Poème, Journal, Lettre ouverte, Fragment...)
+           - data-target du bouton plein écran (même valeur que l'id du bloc)
            - data-url / data-title dans le bouton favori (garde data-categorie="Motscoeur")
            - le titre, le texte, la signature -->
 
+    </div>
+
+    <!-- Fenêtre de lecture plein écran (une seule pour toute la page, réutilisée pour chaque texte) -->
+    <div class="motscoeur-modal" id="motscoeur-modal">
+      <div class="motscoeur-modal-inner">
+        <button class="motscoeur-modal-close">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          <span>Retour</span>
+        </button>
+        <div class="motscoeur-modal-content" id="motscoeur-modal-content"></div>
+      </div>
     </div>
 
   </main>
@@ -153,7 +168,6 @@
           <li><a href="articles.html">Nos articles</a></li>
           <li><a href="contact.html">Contactez-nous</a></li>
           <li><a href="apropos.html">À propos</a></li>
-          <li><a href="motscoeur.html">Motscoeur</a></li>
         </ul>
       </div>
       <div class="bloc-footer">
