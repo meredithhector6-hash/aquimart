@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Quatre formes de projection psychologique qui influencent notre quotidien">
-  <meta name="keywords" content="projection psychologique, conflit moral, relations humaines">
+  <meta name="description" content="Quatre formes de projection psychologique qui influencent notre quotidien, et pourquoi ce qui nous irrite ou nous fascine chez les autres en dit souvent plus long sur nous-mêmes.">
+  <meta name="keywords" content="projection psychologique, mécanisme de défense, inconscient, Jung, Freud, relations humaines">
   <link rel="stylesheet" href="style.css">
-  <title>Quatre formes de projection psychologique qui influencent notre quotidien - Aquim'@rt</title>
+  <title>Les autres, ce miroir troublant : comprendre la projection psychologique - Aquim'@rt</title>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK5XKWKTF5"></script>
   <script>
@@ -17,125 +17,146 @@
   </script>
 </head>
 <body>
- <header>
-  <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
- 
-  <nav class="desktop-nav">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
- 
-  <div class="header-search">
-    <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
-    <div id="search-results" class="search-results"></div>
-  </div>
- 
-  <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
-    <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
-  </a>
- 
-  <button class="hamburger" id="hamburger">
-    <span></span><span></span><span></span><span></span>
-  </button>
- 
-  <nav id="nav-menu">
-    <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
-    <div class="mobile-search">
-      <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
-      <div id="search-results-mobile" class="search-results"></div>
+   <header>
+    <img src="avatar.jpg" alt="Avatar Aquim'@rt" class="header-avatar" id="avatar-header">
+
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+         <li><a href="motscoeur.html">Motscoeur</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="Rechercher un article..." autocomplete="off">
+      <div id="search-results" class="search-results"></div>
     </div>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="articles.html">Nos articles</a></li>
-      <li><a href="contact.html">Contactez-nous</a></li>
-      <li><a href="apropos.html">À propos</a></li>
-    </ul>
-  </nav>
-</header>
- 
+
+    <a href="favoris.html" class="header-favoris" aria-label="Mes favoris">
+      <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+    </a>
+
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav-menu">
+      <img src="logor.png" alt="Logo Aquim'@rt" style="width: 160px; display: block; margin: 0 auto 32px auto; opacity: 0.9;">
+      <div class="mobile-search">
+        <input type="text" id="search-input-mobile" placeholder="Rechercher un article..." autocomplete="off">
+        <div id="search-results-mobile" class="search-results"></div>
+      </div>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="articles.html">Nos articles</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+         <li><a href="motscoeur.html">Motscoeur</a></li>
+      </ul>
+    </nav>
+  </header>
    <main>
 
     <div class="article-header">
+      <button class="favori-btn" data-url="article-projection.html" data-title="Les autres, ce miroir troublant : Comprendre la projection psychologique" data-categorie="Psychologie" aria-label="Ajouter aux favoris">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-6.716-4.35-9.5-8.5C.5 9 1.8 5 5.5 5c2 0 3.5 1.2 4.5 2.8C11 6.2 12.5 5 14.5 5 18.2 5 19.5 9 17.5 12.5 14.716 16.65 12 21 12 21z"/></svg>
+      </button>
       <span class="article-categorie">Psychologie</span>
-      <h1>Les autres, ce miroir troublant : <br>Comprendre la projection psychologique.</h1>
+      <h1>Les autres, ce miroir troublant : <br>Comprendre la projection psychologique</h1>
     </div>
 
     <div class="article-body">
- 
-      <p>Certaines personnes, par leurs traits de caractère, provoquent en nous une vive aversion. Nous les trouvons trop strictes ou pas assez. Trop confiantes, trop libres, trop froides ou simplement « trop » …quelque chose pour nous. D’autres, au contraire, nous fascinent, nous attirent ou nous bouleversent sans que nous sachions vraiment pourquoi.</p>
-      <p>Nous avons tous déjà pensé : « Je ne peux pas sentir cette personne » ou au contraire : « J’aimerais tellement être comme elle. » Mais si ces réactions parlaient parfois autant de nous que des autres ?</p>
-      <p>De toutes les explications possibles : logiques, spirituelles ou psychologiques  penchons-nous aujourd’hui sur l’une des plus intéressantes : la projection.</p>
-       <img src="projection.jpg" alt="Deux personnes qui se regardent de façon méfiante">
-      
-      <p>La projection est un phénomène psychologique introduit par Sigmund Freud, neurologue et fondateur de la psychanalyse, à la fin du XIXe siècle. Elle se définit comme un mécanisme de défense inconscient qui consiste à attribuer à autrui ses propres pensées, désirs ou intentions. C’est voir en l’autre ce qui est caché en nous.</p>
-      
-      <p>Ce concept est repris et développé par Carl Gustav Jung, psychiatre et fondateur de la psychologie analytique, qui disait : « Tout ce qui nous irrite chez les autres peut nous conduire à une meilleure compréhension de nous-mêmes. » Cette affirmation présente les autres comme une sorte de miroir de notre inconscient. La récurrence de ce phénomène dans nos relations quotidiennes, sa subtilité et ce qu’il peut nous révéler sur nous-mêmes en font un sujet fondamental. Nous allons ensemble découvrir la raison pour laquelle nous projetons suivie de quatre principales formes de projection.</p>
-      
-      <p class="sous-titre">Pourquoi projetons-nous ?</p>
-      <p>La projection est une fonction naturelle du psychisme. Le moi, pour se protéger de ce qui est douloureux, inacceptable ou menaçant, a recours à des mécanismes de défense. La projection est l’un d’eux : plutôt que d’affronter une pensée, un désir ou une émotion difficile à intégrer, le psychisme les expulse et les localise à l’extérieur, chez l’autre.
-Ce mécanisme s'active souvent face à ce que Jung appelait l’ombre, cette partie de nous-mêmes que nous refusons de voir, constituée de tout ce que nous avons appris à réprimer, à nier ou à juger inacceptable. Plutôt que de reconnaître : « cette pensée vient de moi », le psychisme formule : « cette caractéristique est en toi. » Ce déplacement soulage momentanément la tension intérieure, mais il nous prive d’une connaissance plus juste de nous-mêmes.</p>
-      
-      <p class="sous-titre">I- La projection du désir réprimé</p>
-      <p><em>Je ne supporte pas que les autres se permettent ce que je m’interdis.</em></p>
-      <p style="font-weight: bold">Claire s’impose une discipline rigoureuse, refuse les dépenses qu’elle juge inutiles, refoule les plaisirs spontanés. Lorsqu’une amie s’offre un voyage improvisé, Claire la juge irresponsable.</p>
-      <p>La projection du désir réprimé est peut-être la plus courante, et la plus difficile à admettre.</p>
-      <p>Dans le cas de Claire, ce qu’elle condamne chez son amie est précisément ce qu’elle désire secrètement pour elle-même : la liberté de s’accorder quelque chose sans aucune justification.</p>
-      <p>C’est là toute la mécanique de cette forme de projection. Ce que nous refoulons inconsciemment, au lieu de disparaître, se déplace. Il revient sous forme de jugement dirigé vers ceux qui, eux, s’autorisent ce que nous nous refusons. On accuse l’autre d’être irresponsable, immature, faible là où nous voudrions simplement lui ressembler un peu.</p>
-      
-       <p class="sous-titre">II- La projection de l’idéal</p>
-      <p><em>J’ai une admiration excessive pour cette personne, sa cohérence, son attitude, sa confiance. Et je trouve que je serais incapable d’être comme elle.</em></p>
-      <p style="font-weight: bold">Sarah admire profondément une collègue. Tout, chez elle, semble solide : sa façon de parler, sa confiance, sa cohérence. Sarah la décrit avec révérence, tout en répétant : « Moi, je ne serai jamais comme ça. »</p>
-      <p>La projection de l’idéal, ou ce que Jung appelait l’ombre dorée, élève au lieu de condamner. Néanmoins le mécanisme reste le même : on dépose sur l’autre quelque chose qui vient de nous-mêmes. Si l’admiration de Sarah était saine, cela donnerait plutôt : <em>« Cette personne m’inspire. »</em>L’admiration projective, elle, dit : <em>« Cette personne possède quelque chose de presque magique que je n’aurai jamais. »</em>L’autre devient un écran sur lequel on projette ses propres possibilités celles qu’on ne se reconnaît pas le droit de porter.</p>
-      <p>Car ce qui nous fascine excessivement chez quelqu’un indique souvent une partie de nous non encore vécue. Si Sarah est à ce point captivée par la confiance de sa collègue, c’est peut-être parce que cette confiance existe en elle  mais lui paraît illégitime ou inaccessible.</p>
-      <p>On pourrait résumer le mécanisme ainsi : <em>« Je t’admire tellement parce que je ne crois pas que cela puisse aussi venir de moi. »</em></p>
-      
-      <p class="sous-titre">III- La projection des intentions cachées</p>
-      <p><em>Je soupçonne mon partenaire d’être constamment en train de me manipuler.</em></p>
-      <p style="font-weight: bold">Roger soupçonne sa partenaire d’avoir toujours quelque chose derrière la tête, d’agir par calcul, de manipuler même dans les gestes les plus simples.</p>
-      <p>La première forme de projection possible ici est celle des intentions cachées. Roger connaît parfaitement la logique du donnant-donnant peut-être pas consciemment, mais il sait influencer sans le dire et donner pour obtenir. Il suppose alors, sans le formuler : <em>« tout le monde fonctionne comme moi. »</em> L’autre devient suspect parce qu’on lui prête sa propre façon de faire.</p>
-      <p>Il peut aussi s’agir d’une projection de sa propre opacité intérieure. Quelqu’un qui filtre beaucoup ce qu’il ressent, dit oui quand il pense non, évite la confrontation directe  finit par percevoir partout des doubles jeux. L’autre devient le miroir de sa propre difficulté à être totalement transparent.</p>
-      <p>Enfin, il y a la projection de la blessure ancienne. Ici ce n’est pas la partenaire qu’on voit vraiment  c’est une figure du passé qu’on lui superpose. Un parent imprévisible, un ex trompeur, un environnement instable. Le psychisme anticipe : <em>« Je connais ce scénario. Il y a forcément un piège. »</em> Et il cherche, inconsciemment, à le trouver.</p>
-      
-      <p class="sous-titre">IV- La projection morale</p>
-      <p><em>Je trouve cette personne immorale, ses décisions, choix et pensées sont trop libéraux, irréfléchis. Elle mériterait d’être ramenée à l’ordre et devrait arrêter de se comporter ainsi pour devenir une personne plus droite, saine, humble.</em></p>
-      <p style="font-weight: bold">Marc est un homme rigoureux, profondément attaché à ses principes. Il observe un collègue qui plaisante avec tout le monde, prend des décisions rapides et semble ne jamais douter. Marc le trouve superficiel, irresponsable, presque dangereux. Il pense souvent : « Des gens comme ça finissent toujours par nuire. »</p>
-      <p>Il existe une forme de projection particulièrement difficile à reconnaître parce qu’elle se présente sous les traits de la vertu : la projection morale.</p>
-      <p>Lorsqu’on trouve quelqu’un profondément immoral, irréfléchi, trop libre, au point de souhaiter qu’une force supérieure le ramène à l’ordre, il vaut la peine de s’arrêter pour examiner la source du jugement.</p>
-      <p>La lecture la plus classique est celle de l’ombre morale. La personne qui condamne avec cette intensité a souvent appris, très tôt, qu’il fallait être pure, disciplinée et raisonnable. Que certains désirs, certaines pensées, étaient honteux. L’autre, celui qu’on juge, devient  le porteur visible de ce qui a été interdit intérieurement. Le sous-texte inconscient pourrait se formuler ainsi : <em>« Comment oses-tu vivre ce que je combats en moi ? »</em></p>
-      <p>Mais il y a une autre forme importante : la projection de l’orgueil moral. Ici, ce qui est projeté est l’agressivité morale elle-même. La personne craint ses propres tendances à juger, à vouloir contrôler, à imposer ses règles aux autres. Plutôt que de les reconnaître, elle les retourne : <em>« Je suis simplement du côté du bien. C’est toi qui dévies. »</em> Dans certains cas, une liberté perçue comme excessive chez l’autre est miroir d’une spontanéité interdite chez soi. L’autre ne dérange parce qu’il incarne, sans apparent effort, ce qu’on n’a jamais osé se permettre.</p>
-      
-      <p>L’aversion et l’admiration ne sont pas toujours de la projection. Nous la reconnaissons lorsque nous réagissons de manière disproportionnée aux actions ou aux caractères des autres, ou lorsqu’une même chose nous rebute chez plusieurs personnes différentes.</p>
-      <p>La projection est donc plus un signal qu'un défaut. Chaque jugement excessif,  fascination inexpliquée ou irritation récurrente peut devenir un moyen de mieux se connaître. </p>
-      <p>Comme le rappelait Jung, les autres sont nos miroirs les plus honnêtes  à condition d’avoir le courage de regarder ce qu’ils reflètent.</p>
-     
-      <!-- Signature auteur -->
-<div class="article-auteur" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #f0e6d8; display: flex; align-items: center; gap: 12px;">
-  <span style="font-family: 'Playfair Display', serif; font-size: 13px; color: #5a5a5a; font-style: italic;">— Aquimar</span>
-</div>
 
-      <!-- Message de fin -->
-<div class="article-fin" style="margin-top: 48px; padding: 24px; background: #faf7f2; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
-  <p style="font-size: 14px; color: #2c2c2c; line-height: 1.8; font-style: italic;">
-    « Ou pap janm dakò n dread toutotan tèt ou gonw gwo chòv » sont les paroles de la chanson <em>Toutotan</em> de PIC qui tournaient en boucle dans ma tête en écrivant cet article 😃. À quelle forme de projection associerais-tu ces paroles ?
-  </p>
-  <a href="https://whatsapp.com/channel/0029VbCUehQL2AU3s438HL3x" target="_blank" style="display: inline-block; margin-top: 16px; font-size: 13px; color: #c9973f; text-decoration: underline;">
-    Réponds-nous sur WhatsApp →
-  </a>
-  <p style="margin-top: 24px; font-size: 13px; color: #5a5a5a;">
-    Suis notre chaîne WhatsApp pour discuter avec nous et être au courant de chaque nouvel article ⬇️
-  </p>
-  <a href="https://whatsapp.com/channel/0029VbCUehQL2AU3s438HL3x" target="_blank" style="display: inline-block; margin-top: 8px; background: #25D366; color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-size: 13px;">
-    Rejoindre la chaîne
-  </a>
-</div>
+      <p>Dans les relations humaines, il est très difficile d'éviter les conflits. Nous entrons en désaccord avec les autres pour des raisons qui nous semblent justes, ou parfois portées par une irrationalité que nous ne savons pas nous expliquer. C'est pourquoi l'un des actes les plus intelligents que l'être humain ait pu poser est celui de s'observer, de s'étudier, et de tenter par tous les moyens de se comprendre. C'est une étape cruciale pour améliorer nos relations interpersonnelles, dont dépend en grande partie notre équilibre.</p>
+
+      <p>Mais s'observer, c'est aussi accepter qu'une grande partie de nos réactions face aux autres en dit long sur nous-mêmes. Ce qui nous irrite sans raison claire, ce qui nous fascine sans qu'on sache pourquoi, est souvent le reflet déplacé de quelque chose que nous portons en nous-mêmes, sans le savoir. Ce mécanisme a un nom : la projection.</p>
+
+      <img src="projection.jpg" alt="Deux personnes qui se regardent de façon méfiante">
+
+      <p>La projection est un phénomène psychologique introduit par Sigmund Freud, neurologue et fondateur de la psychanalyse, à la fin du XIXe siècle. Elle se définit comme un mécanisme de défense inconscient qui consiste à attribuer à autrui ses propres pensées, désirs ou intentions. C'est voir en l'autre ce qui est caché en nous.</p>
+
+      <p>Ce concept est repris et développé par Carl Gustav Jung, psychiatre et fondateur de la psychologie analytique, qui disait : « Tout ce qui nous irrite chez les autres peut nous conduire à une meilleure compréhension de nous-mêmes. » Cette affirmation présente les autres comme une sorte de miroir de notre inconscient. La récurrence de ce phénomène dans nos relations quotidiennes, sa subtilité et ce qu'il peut nous révéler sur nous-mêmes en font un sujet fondamental. Nous allons ensemble découvrir les causes de la projection ainsi que quatre principales formes de projection.</p>
+
+      <p class="sous-titre">Pourquoi projetons-nous ?</p>
+
+      <p>La projection est une fonction naturelle du psychisme. Le moi, pour se protéger de ce qui est douloureux, inacceptable ou menaçant, a recours à des mécanismes de défense. La projection est l'un d'eux : plutôt que d'affronter une pensée, un désir ou une émotion difficile à intégrer, le psychisme les expulse et les localise à l'extérieur, chez l'autre.</p>
+
+      <p>Ce mécanisme s'active souvent face à ce que Jung appelait l'ombre, cette partie de nous-mêmes que nous refusons de voir, constituée de tout ce que nous avons appris à réprimer, à nier ou à juger inacceptable.</p>
+
+      <p class="sous-titre">I- La projection du désir réprimé</p>
+      <img src="pro1.png" alt="Illustration de la projection du désir réprimé">
+      <p><em>Je ne supporte pas que les autres se permettent ce que je m'interdis.</em></p>
+      <p>La projection du désir réprimé est probablement la plus courante, et la plus difficile à admettre. Elle survient quand on refoule un désir, un plaisir ou une liberté qu'on s'interdit à soi-même. Plutôt que de disparaître, ce désir refoulé se déplace : il revient sous forme de jugement, dirigé contre ceux qui, eux, s'autorisent ce qu'on se refuse. On les trouve irresponsables, immatures, ou légers, là où, au fond, on aimerait un peu leur ressembler.</p>
+
+      <p class="sous-titre">II- La projection de l'idéal</p>
+      <img src="pro2.png" alt="Illustration de la projection de l'idéal">
+      <p><em>J'ai une admiration excessive pour cette personne, sa cohérence, son attitude, sa confiance. Et je trouve que je serais incapable d'être comme elle.</em></p>
+      <p>La projection de l'idéal, ce que Jung appelait l'ombre dorée, élève au lieu de condamner, mais le mécanisme reste identique : on dépose sur l'autre quelque chose qui vient de nous-mêmes. Une admiration saine dit « cette personne m'inspire » ; l'admiration projective dit plutôt « cette personne possède quelque chose de presque magique que je n'aurai jamais ». L'autre devient alors un écran sur lequel on projette ses propres possibilités, celles qu'on ne se reconnaît pas le droit de porter.</p>
+      <p>Ce qui nous fascine à l'excès chez quelqu'un révèle souvent une partie de nous-mêmes non encore vécue, une qualité qui existe déjà en nous mais qui nous paraît illégitime ou inaccessible. Le mécanisme tient en une phrase : je t'admire tellement parce que je ne crois pas que cela puisse aussi venir de moi.</p>
+
+      <p class="sous-titre">III- La projection des intentions cachées</p>
+      <img src="pro3.png" alt="Illustration de la projection des intentions cachées">
+      <p><em>Je soupçonne mon partenaire d'être constamment en train de me manipuler.</em></p>
+      <p>La projection des intentions cachées peut prendre plusieurs visages. Le premier tient à la logique du donnant-donnant : quelqu'un qui sait influencer sans le dire, donner pour obtenir, même sans en avoir pleinement conscience, suppose sans le formuler que « tout le monde fonctionne comme moi ». L'autre devient suspect parce qu'on lui prête sa propre façon de faire.</p>
+      <p>Le deuxième vient de sa propre opacité intérieure. Quelqu'un qui filtre beaucoup ce qu'il ressent, dit oui quand il pense non, évite la confrontation directe, finit par percevoir des doubles jeux partout. L'autre devient le miroir de sa propre difficulté à être transparent.</p>
+      <p>Le troisième, enfin, est celui d'une blessure ancienne : ce n'est pas vraiment l'autre qu'on regarde, mais une figure du passé qu'on lui superpose, un parent imprévisible, un ex trompeur, un environnement instable. Le psychisme anticipe : « je connais ce scénario, il y a forcément un piège » et cherche, inconsciemment, à le confirmer.</p>
+
+      <p class="sous-titre">IV- La projection morale</p>
+      <img src="pro4.png" alt="Illustration de la projection morale">
+      <p><em>Je trouve cette personne immorale, ses décisions, choix et pensées sont trop libéraux, irréfléchis. Elle mériterait d'être ramenée à l'ordre.</em></p>
+      <p>Il existe une forme de projection particulièrement difficile à reconnaître, parce qu'elle se présente sous les traits de la vertu : la projection morale. Quand on juge quelqu'un profondément immoral, irréfléchi, trop libre, au point de souhaiter qu'une force supérieure le ramène à l'ordre, la source de ce jugement mérite qu'on s'y attarde.</p>
+      <p>La lecture la plus classique est celle de l'ombre morale. La personne qui condamne avec cette intensité a souvent appris, très tôt, qu'il fallait être pure, disciplinée, raisonnable, et que certains désirs étaient honteux. L'autre devient alors le porteur visible de ce qui a été interdit intérieurement. Le sous-texte pourrait se formuler ainsi : comment oses-tu vivre ce que je combats en moi ?</p>
+      <p>L'autre forme est celle de l'orgueil moral, où c'est l'agressivité du jugement lui-même qui est projetée. On craint ses propres tendances à juger, à vouloir contrôler, à imposer ses règles, et plutôt que de les reconnaître, on les retourne : « je suis simplement du côté du bien, c'est toi qui dévies. » L'autre ne dérange pas parce qu'il est réellement dangereux, mais parce qu'il incarne, sans effort apparent, ce qu'on ne s'est jamais permis.</p>
+
+      <p>L'aversion et l'admiration ne sont pas toujours de la projection. Nous la reconnaissons lorsque nous réagissons de manière disproportionnée aux actions ou aux caractères des autres, ou lorsqu'une même chose nous rebute chez plusieurs personnes différentes.</p>
+
+      <p>Cela dit, quelle qu'en soit la forme, qu'il s'agisse de désir réprimé, d'idéal, de méfiance ou de jugement moral, ce que nous projetons, c'est toujours un conflit qui nous appartient. S'irriter contre quelqu'un qui s'autorise une liberté qu'on se refuse ne veut pas forcément dire qu'on lui ressemble, mais qu'on se bat pour ne pas lui ressembler. Le reproche qu'on fait à l'autre, on se le fait d'abord à soi-même.</p>
+
+      <p>Ne pas le voir, c'est risquer de juger, de blâmer ou d'admirer pour de mauvaises raisons. Le comprendre, au contraire, c'est apaiser ses relations : un peu moins de rancœur et un peu plus de tolérance.</p>
+
+      <p>Comme le rappelait Jung, les autres sont nos miroirs les plus honnêtes, à condition d'avoir le courage de regarder ce qu'ils reflètent.</p>
+
+      <!-- Signature auteur -->
+      <div class="article-auteur" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #f0e6d8; display: flex; align-items: center; gap: 12px;">
+        <span style="font-family: 'Playfair Display', serif; font-size: 13px; color: #5a5a5a; font-style: italic;">— Aquimar</span>
+      </div>
+
+      <div class="glossaire">
+        <p class="sources-titre">Tu as buté sur un mot ?</p>
+        <details class="glossaire-item">
+          <summary>Mécanisme de défense</summary>
+          <p>Une stratégie inconsciente que l'esprit met en place, sans qu'on le décide, pour se protéger d'une émotion ou d'une pensée trop difficile à supporter. <a href="https://www.larousse.fr/encyclopedie/philosophie/d%C3%A9fense/191446" target="_blank">En savoir plus (Larousse)</a></p>
+        </details>
+        <details class="glossaire-item">
+          <summary>Inconscient</summary>
+          <p>La part du fonctionnement psychique à laquelle nous n'avons pas directement accès, mais qui influence quand même nos pensées et nos comportements. <a href="https://www.larousse.fr/dictionnaires/francais/inconscient/42355" target="_blank">En savoir plus (Larousse)</a></p>
+        </details>
+        <details class="glossaire-item">
+          <summary>Ombre (Jung)</summary>
+          <p>Dans la théorie de Carl Gustav Jung, la part de nous-mêmes qu'on refuse de reconnaître, faite de tout ce qu'on a appris à juger inacceptable chez soi. <a href="https://www.jepense.org/ombre-definition-psychologie-analytique/" target="_blank">En savoir plus</a></p>
+        </details>
+      </div>
+
+      <div class="lire-aussi">
+        <p class="sources-titre">À lire aussi</p>
+        <div class="lire-aussi-cards">
+          <a class="lire-aussi-card" href="article-cerveaux.html">
+            <span class="lire-aussi-cat">Sciences</span>
+            <span class="lire-aussi-title">Quand les cerveaux noirs innovent : six avancées à (re)découvrir</span>
+          </a>
+          <a class="lire-aussi-card" href="article-inflation.html">
+            <span class="lire-aussi-cat">Société</span>
+            <span class="lire-aussi-title">L'inflation : comprendre ses origines et ses conséquences</span>
+          </a>
+        </div>
+      </div>
 
       <div class="article-sources">
         <p class="sources-titre">Pour aller plus loin</p>
-        <p>Carl Gustav Jung, Ma vie — Souvenirs, rêves et pensées / Sigmund Freud, Introduction à la psychanalyse</p>
+        <p>Carl Gustav Jung, <em>Ma vie — Souvenirs, rêves et pensées</em> / Sigmund Freud, <em>Introduction à la psychanalyse</em></p>
       </div>
 
     </div>
@@ -151,6 +172,7 @@ Ce mécanisme s'active souvent face à ce que Jung appelait l’ombre, cette par
           <li><a href="articles.html">Nos articles</a></li>
           <li><a href="contact.html">Contactez-nous</a></li>
           <li><a href="apropos.html">À propos</a></li>
+           <li><a href="motscoeur.html">Motscoeur</a></li>
         </ul>
       </div>
       <div class="bloc-footer">
@@ -167,7 +189,15 @@ Ce mécanisme s'active souvent face à ce que Jung appelait l’ombre, cette par
       <p>Des faits, des idées, des gens ! — Copyright 2026 — Tous droits réservés</p>
     </div>
   </footer>
-   <!-- Avatar flottant -->
+
+  <a href="https://whatsapp.com/channel/0029VbCUehQL2AU3s438HL3x" target="_blank" class="whatsapp-flottant" aria-label="Rejoindre la chaîne WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.244 1.606 6.109L.055 23.454a.75.75 0 0 0 .919.919l5.345-1.551A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 0 1-4.964-1.359l-.356-.211-3.695 1.072 1.072-3.695-.211-.356A9.725 9.725 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+    </svg>
+  </a>
+
+  <!-- Avatar flottant -->
   <div class="avatar-flottant">
     <div class="avatar-bulle" id="avatar-bulle">
       « La curiosité est le début de tout. »
