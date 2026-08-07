@@ -287,20 +287,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = document.getElementById('motscoeur-modal-content');
     const closeBtn = modal.querySelector('.motscoeur-modal-close');
 
+    function openModal(entryId) {
+      const entry = document.getElementById(entryId);
+      const scrollEl = entry ? entry.querySelector('.motscoeur-entry-scroll') : null;
+      if (!scrollEl) return;
+
+      content.innerHTML = scrollEl.innerHTML;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
     function closeModal() {
       modal.classList.remove('open');
       document.body.style.overflow = '';
     }
 
+    // Bouton plein écran
     document.querySelectorAll('.expand-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const entry = document.getElementById(btn.dataset.target);
-        const scrollEl = entry ? entry.querySelector('.motscoeur-entry-scroll') : null;
-        if (!scrollEl) return;
+      btn.addEventListener('click', () => openModal(btn.dataset.target));
+    });
 
-        content.innerHTML = scrollEl.innerHTML;
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
+    // Un clic n'importe où sur le texte ouvre aussi la fenêtre
+    document.querySelectorAll('.motscoeur-entry-scroll').forEach(scrollEl => {
+      scrollEl.addEventListener('click', () => {
+        const entry = scrollEl.closest('.motscoeur-entry');
+        if (entry) openModal(entry.id);
       });
     });
 
@@ -313,6 +324,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeModal();
     });
+
+    // Un lien vers motscoeur.html#id-du-texte ouvre directement la fenêtre plein écran
+    if (location.hash) {
+      const targetId = location.hash.substring(1);
+      if (document.getElementById(targetId)) {
+        openModal(targetId);
+      }
+    }
   }
 
   initMotscoeurExpand();
