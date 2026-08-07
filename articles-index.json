@@ -16,5 +16,17 @@
     "categorie": "Sciences",
     "url": "article-cerveaux.html",
     "excerpt": "Six inventions scientifiques signées par des inventeurs noirs, et ce qu'elles ont changé, hier comme aujourd'hui."
+  },
+  {
+    "title": "La jeunesse a besoin de guides : Choisir son mentor avec discernement (partie 2/2)",
+    "categorie": "Société",
+    "url": "article-mentor-2.html",
+    "excerpt": "Les dérives du mentorat à éviter, comment bien choisir le sien, et devenir à son tour un bon guide."
+  },
+  {
+    "title": "La jeunesse a besoin de guides : Choisir son mentor avec discernement (partie 1/2)",
+    "categorie": "Société",
+    "url": "article-mentor-1.html",
+    "excerpt": "D'où vient le mentorat, ce que fait vraiment un bon mentor, et pourquoi cette influence a besoin de limites."
   }
 ]
