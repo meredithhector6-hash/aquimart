@@ -357,7 +357,7 @@ nav#nav-menu ul li a:hover {
   margin-bottom: 14px;
 }
 .motscoeur-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Libertinus Serif", serif;
   font-style: italic;
   font-size: 30px;
   font-weight: 600;
@@ -365,7 +365,7 @@ nav#nav-menu ul li a:hover {
   margin-bottom: 16px;
 }
 .motscoeur-hero p {
-  font-family: 'Playfair Display', serif;
+  font-family: "Libertinus Serif", serif;
   font-size: 14px;
   color: #6b5f8a;
   line-height: 1.8;
