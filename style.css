@@ -973,7 +973,7 @@ nav#nav-menu ul li a:hover {
   margin-bottom: 16px;
 }
 .motscoeur-poeme h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Libertinus Serif", serif;
   font-size: 22px;
   font-weight: 600;
   color: #2c2c2c;
@@ -981,7 +981,7 @@ nav#nav-menu ul li a:hover {
 }
 .motscoeur-poeme p {
   font-size: 15px;
-  font-style: italic;
+  font-style: none;
   color: #2c2c2c;
   line-height: 2;
   margin-bottom: 14px;
